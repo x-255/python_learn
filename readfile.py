@@ -1,9 +1,8 @@
-with open('./bill.txt', encoding='utf-8') as raw:
-    ctx = ''
-    for line in raw:
-        if line.strip().split('，')[4] != '测试':
-            ctx += line
+bak = open('./bill.txt.bak', 'w', encoding='utf-8')
 
-    bak = open('./bill.txt.bak', 'w', encoding='utf-8')
-    bak.write(ctx)
+with open('./bill.txt', encoding='utf-8') as raw:
+    for line in raw:
+        if line.count('测试') < 1:
+            bak.write(line)
+
     bak.close()
