@@ -1,5 +1,5 @@
-from module1 import *
+import os
 
-print(add(1, 2))
-print(sub(1, 2))
- 
+os.system('notepad.exe')
+
+os.startfile('C:/Program Files (x86)/Tencent/WeChat/WeChat.exe')
