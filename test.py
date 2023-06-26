@@ -1,5 +1,7 @@
-import os
+list = [1, 2, 3]
 
-os.system('notepad.exe')
+a, b, c = {1, 2, 3}
 
-os.startfile('C:/Program Files (x86)/Tencent/WeChat/WeChat.exe')
+print(a)
+print(b)
+print(c)
