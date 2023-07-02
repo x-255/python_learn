@@ -55,6 +55,8 @@ def login_by_action(wd: WebDriver, cachefile):
     wd.switch_to.frame('alibaba-login-box')
     ActionChains(wd).click(wd.find_element(
         By.CSS_SELECTOR, '.login-tabs-tab:last-child')).perform()
+    wd.find_element(By.ID, 'fm-login-id').send_keys('17788886666')
+    wd.find_element(By.ID, 'fm-login-password').send_keys('123321')
 
     sleep(10)
     with open(cachefile, 'wb') as file:
