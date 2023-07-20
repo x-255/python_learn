@@ -1,0 +1,1 @@
+logging.info('This is a test message')
