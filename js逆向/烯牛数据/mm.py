@@ -1,4 +1,4 @@
-import os
+from os import path
 import json
 import requests
 import execjs
@@ -52,8 +52,12 @@ response = requests.post(
     data=data,
 ).json()
 
-8999
-with open(os.path.join(os.path.dirname(__file__), 'dd.js'), 'r') as f:
+
+def json_path(p: str):
+    return path.join(path.dirname(__file__), p)
+
+
+with open(json_path('dd.js'), 'r') as f:
     js_code = f.read()
 ctx = execjs.compile(js_code)
 result = ctx.call('dd', response['d'])
